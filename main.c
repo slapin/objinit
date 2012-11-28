@@ -8,7 +8,7 @@ int main()
 	len = &_cb_end - &_cb_start;
 	count = len / sizeof(struct cb_data);
 	printf("_cb_start = %p _cb_end = %p, count = %d, len = %d\n", &_cb_start, &_cb_end, count, len);
-	for (p = &_cb_start; p < &_cb_end; p++) {
+	for (p = (struct cb_data *)&_cb_start; p < (struct cb_data *)&_cb_end; p++) {
 		int ret;
 		ret = p->init(p);
 		if (ret)

@@ -17,5 +17,5 @@ static int f2(struct cb_data *p)
 	return 0;
 }
 
-DECLARE_CB(__FILE__,init, f1, f2, 0, 0);
+DECLARE_CB(__FILE__, init, f1, f2, NULL);
 
